@@ -33,12 +33,46 @@
                                             <constraint firstAttribute="width" secondItem="iCk-qb-bGn" secondAttribute="height" multiplier="61:10" priority="500" id="t3N-JY-mEV"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PXC-xh-cz2">
+                                        <rect key="frame" x="308" y="162" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9OW-mk-uct"/>
+                                            <constraint firstAttribute="width" constant="50" id="TUR-Og-8HR"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N8z-4a-gdq">
+                                        <rect key="frame" x="308" y="91" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6J2-vm-FO7"/>
+                                            <constraint firstAttribute="width" constant="50" id="79P-TC-MH1"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adw-We-HmG">
+                                        <rect key="frame" x="308" y="20" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6R2-EP-hPi"/>
+                                            <constraint firstAttribute="width" constant="50" id="wAg-fV-PgT"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="PXC-xh-cz2" firstAttribute="centerY" secondItem="oUF-UX-ZKZ" secondAttribute="centerY" id="1rx-Jw-Sf7"/>
+                                    <constraint firstItem="adw-We-HmG" firstAttribute="centerX" secondItem="oUF-UX-ZKZ" secondAttribute="centerX" id="4ew-es-l5x"/>
+                                    <constraint firstItem="N8z-4a-gdq" firstAttribute="centerX" secondItem="oUF-UX-ZKZ" secondAttribute="centerX" id="7g4-r7-5wa"/>
+                                    <constraint firstItem="adw-We-HmG" firstAttribute="centerX" secondItem="oUF-UX-ZKZ" secondAttribute="centerX" id="Ew2-Je-cGp"/>
+                                    <constraint firstItem="PXC-xh-cz2" firstAttribute="centerY" secondItem="oUF-UX-ZKZ" secondAttribute="centerY" id="PeB-ht-j5w"/>
+                                    <constraint firstItem="PXC-xh-cz2" firstAttribute="centerX" secondItem="oUF-UX-ZKZ" secondAttribute="centerX" id="Pu7-8a-iQ0"/>
                                     <constraint firstAttribute="width" secondItem="oUF-UX-ZKZ" secondAttribute="height" multiplier="500:667" id="T1a-UU-5yj"/>
+                                    <constraint firstItem="PXC-xh-cz2" firstAttribute="centerX" secondItem="oUF-UX-ZKZ" secondAttribute="centerX" id="TmG-sO-UOY"/>
+                                    <constraint firstItem="N8z-4a-gdq" firstAttribute="centerX" secondItem="oUF-UX-ZKZ" secondAttribute="centerX" id="c9M-zI-9ts"/>
                                     <constraint firstAttribute="trailing" secondItem="iCk-qb-bGn" secondAttribute="trailing" constant="20" id="hi8-6q-jQ7"/>
                                     <constraint firstAttribute="bottom" secondItem="iCk-qb-bGn" secondAttribute="bottom" constant="20" id="q9W-2Q-yO4"/>
+                                    <constraint firstItem="PXC-xh-cz2" firstAttribute="top" secondItem="N8z-4a-gdq" secondAttribute="bottom" multiplier="1:1" constant="21" id="tqD-K2-d42"/>
+                                    <constraint firstItem="N8z-4a-gdq" firstAttribute="top" secondItem="adw-We-HmG" secondAttribute="bottom" multiplier="1:1" constant="21" id="uIH-kT-KU3"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -51,6 +85,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blueBox1" destination="adw-We-HmG" id="oVT-BQ-gNq"/>
+                        <outlet property="blueBox2" destination="N8z-4a-gdq" id="Zjp-x0-tu4"/>
+                        <outlet property="buleBox3" destination="PXC-xh-cz2" id="W8N-Qz-MkS"/>
                         <outlet property="greenBox" destination="oUF-UX-ZKZ" id="meu-xb-lUo"/>
                         <outlet property="purpleBox" destination="iCk-qb-bGn" id="5B5-bi-BTL"/>
                     </connections>
