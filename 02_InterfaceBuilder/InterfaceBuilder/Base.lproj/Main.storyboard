@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InterfaceBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oUF-UX-ZKZ">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iCk-qb-bGn">
+                                        <rect key="frame" x="342" y="305" width="305" height="50"/>
+                                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="hBU-6T-xeN"/>
+                                            <constraint firstAttribute="width" secondItem="iCk-qb-bGn" secondAttribute="height" multiplier="61:10" priority="500" id="t3N-JY-mEV"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oUF-UX-ZKZ" secondAttribute="height" multiplier="500:667" id="T1a-UU-5yj"/>
+                                    <constraint firstAttribute="trailing" secondItem="iCk-qb-bGn" secondAttribute="trailing" constant="20" id="hi8-6q-jQ7"/>
+                                    <constraint firstAttribute="bottom" secondItem="iCk-qb-bGn" secondAttribute="bottom" constant="20" id="q9W-2Q-yO4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oUF-UX-ZKZ" secondAttribute="bottom" id="kaG-3A-Apn"/>
+                            <constraint firstAttribute="trailing" secondItem="oUF-UX-ZKZ" secondAttribute="trailing" id="nDe-QZ-KZg"/>
+                            <constraint firstItem="oUF-UX-ZKZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="u6W-AY-cHh"/>
+                            <constraint firstItem="oUF-UX-ZKZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vyl-h5-mJ5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="greenBox" destination="oUF-UX-ZKZ" id="meu-xb-lUo"/>
+                        <outlet property="purpleBox" destination="iCk-qb-bGn" id="5B5-bi-BTL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.28185907046478" y="141.59999999999999"/>
+        </scene>
+    </scenes>
+</document>

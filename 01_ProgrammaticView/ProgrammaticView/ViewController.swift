@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     var framingViewHeightConstraint: NSLayoutConstraint = NSLayoutConstraint.init()
     var framingViewWidthConstraint: NSLayoutConstraint = NSLayoutConstraint.init()
     
+    // Added elements
+    var purpleBox: UIView = UIView(frame: CGRect.zero)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         squareButton.setTitle("Square", for: .normal)
@@ -59,6 +63,21 @@ class ViewController: UIViewController {
         
         framingViewWidthConstraint = NSLayoutConstraint.init(item: framingView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 500.0)
         framingViewWidthConstraint.isActive = true
+        
+//        purpleBox.translatesAutoresizingMaskIntoConstraints = false
+//        purpleBox.backgroundColor = UIColor.purple
+//        view.addSubview(purpleBox)
+        // Get the superview's layout
+        let parentBox = framingView
+        // Pin the leading edge of myView to the margin's leading edge
+        purpleBox.leadingAnchor.constraint(equalTo: parentBox.leadingAnchor).isActive = true
+        
+        // Pin the trailing edge of myView to the margin's trailing edge
+        purpleBox.trailingAnchor.constraint(equalTo: parentBox.trailingAnchor).isActive = true
+        
+        // Give myView a 1:2 aspect ratio
+        purpleBox.heightAnchor.constraint(equalTo: purpleBox.widthAnchor, multiplier: 2.0).isActive = true
+        
     
     }
 
