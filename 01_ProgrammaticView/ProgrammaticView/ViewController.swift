@@ -21,9 +21,9 @@ class ViewController: UIViewController {
     var blueView1: UIView = UIView(frame: CGRect.zero)
     var blueView2: UIView = UIView(frame: CGRect.zero)
     var blueView3: UIView = UIView(frame: CGRect.zero)
-    let redView     = UIView(frame: CGRect.zero)
-    let orangeLeftView  = UIView(frame: CGRect.zero)
-    let orangeRightView  = UIView(frame: CGRect.zero)
+    var redView: UIView = UIView(frame: CGRect.zero)
+    var orangeLeftView: UIView = UIView(frame: CGRect.zero)
+    var orangeRightView: UIView = UIView(frame: CGRect.zero)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -124,13 +124,241 @@ class ViewController: UIViewController {
 
         orangeRightView.backgroundColor = UIColor.orange
         orangeRightView.translatesAutoresizingMaskIntoConstraints = false
-        framingView.addSubview(orangeLeftView)
-
+        framingView.addSubview(orangeRightView)
     }
     
-    // constrains
+    // Constrain settings
     override func viewDidLayoutSubviews() {
-        // TODO: code here
+        // purpleView
+        NSLayoutConstraint.init(item: purpleView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: framingView,
+                                attribute: .bottom,
+                                multiplier: 1.0,
+                                constant: -20.0).isActive = true
+
+        NSLayoutConstraint.init(item: purpleView,
+                                attribute: .right,
+                                relatedBy: .equal,
+                                toItem: framingView,
+                                attribute: .right,
+                                multiplier: 1.0,
+                                constant: -20.0).isActive = true
+
+        NSLayoutConstraint.init(item: purpleView,
+                                attribute: .height,
+                                relatedBy: .equal,
+                                toItem: nil,
+                                attribute: .notAnAttribute,
+                                multiplier: 1.0,
+                                constant: 50.0).isActive = true
+
+        NSLayoutConstraint.init(item: purpleView,
+                                attribute: .width,
+                                relatedBy: .equal,
+                                toItem: framingView,
+                                attribute: .width,
+                                multiplier: 0.61,
+                                constant: -20.0).isActive = true
+
+        // blueView1
+        NSLayoutConstraint.init(item: blueView1,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: blueView2,
+                                attribute: .top,
+                                multiplier: 1.0,
+                                constant: -40.0).isActive = true
+
+        NSLayoutConstraint.init(item: blueView1,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: framingView,
+                                attribute: .centerX,
+                                multiplier: 1.0,
+                                constant: 0.0).isActive = true
+
+        NSLayoutConstraint.init(item: blueView1,
+                                attribute: .height,
+                                relatedBy: .equal,
+                                toItem: nil,
+                                attribute: .notAnAttribute,
+                                multiplier: 1.0,
+                                constant: 50.0).isActive = true
+
+        NSLayoutConstraint.init(item: blueView1,
+                                attribute: .width,
+                                relatedBy: .equal,
+                                toItem: nil,
+                                attribute: .notAnAttribute,
+                                multiplier: 1.0,
+                                constant: 50.0).isActive = true
+
+        // blueView2
+        NSLayoutConstraint.init(item: blueView2,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: framingView,
+                                attribute: .centerX,
+                                multiplier: 1.0,
+                                constant: 0.0).isActive = true
+
+        NSLayoutConstraint.init(item: blueView2,
+                                attribute: .centerY,
+                                relatedBy: .equal,
+                                toItem: framingView,
+                                attribute: .centerY,
+                                multiplier: 1.0,
+                                constant: 0.0).isActive = true
+
+        NSLayoutConstraint.init(item: blueView2,
+                                attribute: .height,
+                                relatedBy: .equal,
+                                toItem: nil,
+                                attribute: .notAnAttribute,
+                                multiplier: 1.0,
+                                constant: 50.0).isActive = true
+
+        NSLayoutConstraint.init(item: blueView2,
+                                attribute: .width,
+                                relatedBy: .equal,
+                                toItem: nil,
+                                attribute: .notAnAttribute,
+                                multiplier: 1.0,
+                                constant: 50.0).isActive = true
+
+        // blueView3
+        NSLayoutConstraint.init(item: blueView3,
+                                attribute: .top,
+                                relatedBy: .equal,
+                                toItem: blueView2,
+                                attribute: .bottom,
+                                multiplier: 1.0,
+                                constant: 40.0).isActive = true
+
+        NSLayoutConstraint.init(item: blueView3,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: framingView,
+                                attribute: .centerX,
+                                multiplier: 1.0,
+                                constant: 0.0).isActive = true
+
+        NSLayoutConstraint.init(item: blueView3,
+                                attribute: .height,
+                                relatedBy: .equal,
+                                toItem: nil,
+                                attribute: .notAnAttribute,
+                                multiplier: 1.0,
+                                constant: 50.0).isActive = true
+
+        NSLayoutConstraint.init(item: blueView3,
+                                attribute: .width,
+                                relatedBy: .equal,
+                                toItem: nil,
+                                attribute: .notAnAttribute,
+                                multiplier: 1.0,
+                                constant: 50.0).isActive = true
+
+        // redView
+        NSLayoutConstraint.init(item: redView,
+                                attribute: .top,
+                                relatedBy: .equal,
+                                toItem: framingView,
+                                attribute: .top,
+                                multiplier: 1.0,
+                                constant: 20.0).isActive = true
+
+        NSLayoutConstraint.init(item: redView,
+                                attribute: .right,
+                                relatedBy: .equal,
+                                toItem: framingView,
+                                attribute: .right,
+                                multiplier: 1.0,
+                                constant: -20.0).isActive = true
+
+        NSLayoutConstraint.init(item: redView,
+                                attribute: .height,
+                                relatedBy: .equal,
+                                toItem: nil,
+                                attribute: .notAnAttribute,
+                                multiplier: 1.0,
+                                constant: 50.0).isActive = true
+
+        NSLayoutConstraint.init(item: redView,
+                                attribute: .width,
+                                relatedBy: .equal,
+                                toItem: nil,
+                                attribute: .notAnAttribute,
+                                multiplier: 1.0,
+                                constant: 150.0).isActive = true
+
+        // orangeLeftView
+        NSLayoutConstraint.init(item: orangeLeftView,
+                                attribute: .centerY,
+                                relatedBy: .equal,
+                                toItem: redView,
+                                attribute: .centerY,
+                                multiplier: 1.0,
+                                constant: 0.0).isActive = true
+
+        NSLayoutConstraint.init(item: orangeLeftView,
+                                attribute: .right,
+                                relatedBy: .equal,
+                                toItem: orangeRightView,
+                                attribute: .left,
+                                multiplier: 1.0,
+                                constant: -10.0).isActive = true
+        
+        NSLayoutConstraint.init(item: orangeLeftView,
+                                attribute: .height,
+                                relatedBy: .equal,
+                                toItem: nil,
+                                attribute: .notAnAttribute,
+                                multiplier: 1.0,
+                                constant: 30.0).isActive = true
+        
+        NSLayoutConstraint.init(item: orangeLeftView,
+                                attribute: .width,
+                                relatedBy: .equal,
+                                toItem: nil,
+                                attribute: .notAnAttribute,
+                                multiplier: 1.0,
+                                constant: 70.0).isActive = true
+
+        // orangeRightView
+        NSLayoutConstraint.init(item: orangeRightView,
+                                attribute: .right,
+                                relatedBy: .equal,
+                                toItem: redView,
+                                attribute: .right,
+                                multiplier: 1.0,
+                                constant: -10.0).isActive = true
+
+        NSLayoutConstraint.init(item: orangeRightView,
+                                attribute: .centerY,
+                                relatedBy: .equal,
+                                toItem: redView,
+                                attribute: .centerY,
+                                multiplier: 1.0,
+                                constant: 0.0).isActive = true
+
+        NSLayoutConstraint.init(item: orangeRightView,
+                                attribute: .height,
+                                relatedBy: .equal,
+                                toItem: nil,
+                                attribute: .notAnAttribute,
+                                multiplier: 1.0,
+                                constant: 30.0).isActive = true
+        
+        NSLayoutConstraint.init(item: orangeRightView,
+                                attribute: .width,
+                                relatedBy: .equal,
+                                toItem: nil,
+                                attribute: .notAnAttribute,
+                                multiplier: 1.0,
+                                constant: 50.0).isActive = true
     }
 
     func resizeFramingView(_ sender: UIButton) {
