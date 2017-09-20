@@ -16,9 +16,14 @@ class ViewController: UIViewController {
     var framingViewHeightConstraint: NSLayoutConstraint = NSLayoutConstraint.init()
     var framingViewWidthConstraint: NSLayoutConstraint = NSLayoutConstraint.init()
     
-    // Added elements
-    var purpleBox: UIView = UIView(frame: CGRect.zero)
-    
+    // Main elements
+    var purpleView: UIView = UIView(frame: CGRect.zero)
+    var blueView1: UIView = UIView(frame: CGRect.zero)
+    var blueView2: UIView = UIView(frame: CGRect.zero)
+    var blueView3: UIView = UIView(frame: CGRect.zero)
+    let redView     = UIView(frame: CGRect.zero)
+    let orangeLeftView  = UIView(frame: CGRect.zero)
+    let orangeRightView  = UIView(frame: CGRect.zero)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,38 +52,85 @@ class ViewController: UIViewController {
         
         NSLayoutConstraint.activate(buttonsHorizontalContraints)
         
-        let squareButtonBottomConstraint = NSLayoutConstraint.init(item: squareButton, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: -50.0)
+        let squareButtonBottomConstraint = NSLayoutConstraint.init(item: squareButton,
+                                                                   attribute: .bottom,
+                                                                   relatedBy: .equal,
+                                                                   toItem: view,
+                                                                   attribute: .bottom,
+                                                                   multiplier: 1.0,
+                                                                   constant: -50.0)
         squareButtonBottomConstraint.isActive = true
         
-        let framingViewCenterXContraint = NSLayoutConstraint.init(item: framingView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
-        
+        let framingViewCenterXContraint = NSLayoutConstraint.init(item: framingView,
+                                                                  attribute: .centerX,
+                                                                  relatedBy: .equal,
+                                                                  toItem: view,
+                                                                  attribute: .centerX,
+                                                                  multiplier: 1.0,
+                                                                  constant: 0.0)
         framingViewCenterXContraint.isActive = true
 
-        let framingViewCenterYContraint = NSLayoutConstraint.init(item: framingView, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1.0, constant: 0.0)
-        
+        let framingViewCenterYContraint = NSLayoutConstraint.init(item: framingView,
+                                                                  attribute: .centerY,
+                                                                  relatedBy: .equal,
+                                                                  toItem: view,
+                                                                  attribute: .centerY,
+                                                                  multiplier: 1.0,
+                                                                  constant: 0.0)
         framingViewCenterYContraint.isActive = true
         
-        framingViewHeightConstraint = NSLayoutConstraint.init(item: framingView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 500.0)
+        framingViewHeightConstraint = NSLayoutConstraint.init(item: framingView,
+                                                              attribute: .height,
+                                                              relatedBy: .equal,
+                                                              toItem: nil,
+                                                              attribute: .notAnAttribute,
+                                                              multiplier: 1.0,
+                                                              constant: 500.0)
         framingViewHeightConstraint.isActive = true
         
-        framingViewWidthConstraint = NSLayoutConstraint.init(item: framingView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 500.0)
+        framingViewWidthConstraint = NSLayoutConstraint.init(item: framingView,
+                                                             attribute: .width,
+                                                             relatedBy: .equal,
+                                                             toItem: nil,
+                                                             attribute: .notAnAttribute,
+                                                             multiplier: 1.0,
+                                                             constant: 500.0)
         framingViewWidthConstraint.isActive = true
-        
-//        purpleBox.translatesAutoresizingMaskIntoConstraints = false
-//        purpleBox.backgroundColor = UIColor.purple
-//        view.addSubview(purpleBox)
-        // Get the superview's layout
-        let parentBox = framingView
-        // Pin the leading edge of myView to the margin's leading edge
-        purpleBox.leadingAnchor.constraint(equalTo: parentBox.leadingAnchor).isActive = true
-        
-        // Pin the trailing edge of myView to the margin's trailing edge
-        purpleBox.trailingAnchor.constraint(equalTo: parentBox.trailingAnchor).isActive = true
-        
-        // Give myView a 1:2 aspect ratio
-        purpleBox.heightAnchor.constraint(equalTo: purpleBox.widthAnchor, multiplier: 2.0).isActive = true
-        
+
+        // Main elements settings
+        purpleView.backgroundColor = UIColor.purple
+        purpleView.translatesAutoresizingMaskIntoConstraints = false
+        framingView.addSubview(purpleView)
+
+        blueView1.backgroundColor = UIColor.blue
+        blueView1.translatesAutoresizingMaskIntoConstraints = false
+        framingView.addSubview(blueView1)
+
+        blueView2.backgroundColor = UIColor.blue
+        blueView2.translatesAutoresizingMaskIntoConstraints = false
+        framingView.addSubview(blueView2)
+
+        blueView3.backgroundColor = UIColor.blue
+        blueView3.translatesAutoresizingMaskIntoConstraints = false
+        framingView.addSubview(blueView3)
+
+        redView.backgroundColor = UIColor.red
+        redView.translatesAutoresizingMaskIntoConstraints = false
+        framingView.addSubview(redView)
+
+        orangeLeftView.backgroundColor = UIColor.orange
+        orangeLeftView.translatesAutoresizingMaskIntoConstraints = false
+        framingView.addSubview(orangeLeftView)
+
+        orangeRightView.backgroundColor = UIColor.orange
+        orangeRightView.translatesAutoresizingMaskIntoConstraints = false
+        framingView.addSubview(orangeLeftView)
+
+    }
     
+    // constrains
+    override func viewDidLayoutSubviews() {
+        // TODO: code here
     }
 
     func resizeFramingView(_ sender: UIButton) {
