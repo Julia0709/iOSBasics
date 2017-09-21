@@ -8,6 +8,27 @@
 
 import UIKit
 
+// Enable hex color code
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(rgb: Int) {
+        self.init(
+            red: (rgb >> 16) & 0xFF,
+            green: (rgb >> 8) & 0xFF,
+            blue: rgb & 0xFF
+        )
+    }
+}
+
+let BG_COLOR = UIColor(rgb: 0x4E92DF)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,24 +39,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabBarController = UITabBarController()
         
-        let favoritesVC = ViewController()
-        favoritesVC.title = "Favorites"
-        favoritesVC.view.backgroundColor = UIColor.orange
+        let city1VC = ViewController()
+        city1VC.title = "Vancouver"
+        city1VC.view.backgroundColor = BG_COLOR
         
-        let downloadVC = ViewController()
-        downloadVC.title = "Downloads"
-        downloadVC.view.backgroundColor = UIColor.blue
+        let city2VC = ViewController()
+        city2VC.title = "city2"
+        city2VC.view.backgroundColor = BG_COLOR
         
-        let historyVC = ViewController()
-        historyVC.title = "History"
-        historyVC.view.backgroundColor = UIColor.cyan
+        let city3VC = ViewController()
+        city3VC.title = "city3"
+        city3VC.view.backgroundColor = BG_COLOR
+
+        let city4VC = ViewController()
+        city4VC.title = "city4"
+        city4VC.view.backgroundColor = BG_COLOR
         
+        city1VC.tabBarItem = UITabBarItem(title: "city1", image: UIImage(named: "clear-night"), tag: 0)
+        city2VC.tabBarItem = UITabBarItem(title: "city2", image: UIImage(named: "clear-night"), tag: 1)
+        city3VC.tabBarItem = UITabBarItem(title: "city3", image: UIImage(named: "clear-night"), tag: 2)
+        city4VC.tabBarItem = UITabBarItem(title: "city4", image: UIImage(named: "clear-night"), tag: 3)
         
-        favoritesVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
-        downloadVC.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
-        historyVC.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 2)
-        
-        let controllers = [favoritesVC, downloadVC, historyVC]
+        let controllers = [city1VC, city2VC, city3VC, city4VC]
         
         tabBarController.viewControllers = controllers.map {
             UINavigationController(rootViewController: $0)

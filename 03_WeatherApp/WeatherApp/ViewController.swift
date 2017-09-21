@@ -15,10 +15,10 @@ class ViewController: UIViewController {
         
         view.backgroundColor = UIColor.blue
         
-        let button = UIButton(frame: CGRect(x: view.bounds.width / 2 - 50, y: view.bounds.height / 2, width: 100, height: 50))
-        button.backgroundColor = UIColor.black
-        button.addTarget(self, action: #selector(pushToNextVC), for: .touchUpInside)
-        view.addSubview(button)
+//        let button = UIButton(frame: CGRect(x: view.bounds.width / 2 - 50, y: view.bounds.height / 2, width: 100, height: 50))
+//        button.backgroundColor = UIColor.black
+//        button.addTarget(self, action: #selector(pushToNextVC), for: .touchUpInside)
+//        view.addSubview(button)
         
     }
     
