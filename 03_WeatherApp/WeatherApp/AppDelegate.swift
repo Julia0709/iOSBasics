@@ -28,6 +28,7 @@ extension UIColor {
 }
 
 let BG_COLOR = UIColor(rgb: 0x4E92DF)
+let CITY_NAMES = ["Vancouver", "Cargary", "Tronto", "Otawa"]
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -40,25 +41,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = UITabBarController()
         
         let city1VC = ViewController()
-        city1VC.title = "Vancouver"
+        city1VC.title = CITY_NAMES[0]
         city1VC.view.backgroundColor = BG_COLOR
         
         let city2VC = ViewController()
-        city2VC.title = "city2"
+        city2VC.title = CITY_NAMES[1]
         city2VC.view.backgroundColor = BG_COLOR
         
         let city3VC = ViewController()
-        city3VC.title = "city3"
+        city3VC.title = CITY_NAMES[2]
         city3VC.view.backgroundColor = BG_COLOR
 
         let city4VC = ViewController()
-        city4VC.title = "city4"
+        city4VC.title = CITY_NAMES[3]
         city4VC.view.backgroundColor = BG_COLOR
         
-        city1VC.tabBarItem = UITabBarItem(title: "city1", image: UIImage(named: "clear-night"), tag: 0)
-        city2VC.tabBarItem = UITabBarItem(title: "city2", image: UIImage(named: "clear-night"), tag: 1)
-        city3VC.tabBarItem = UITabBarItem(title: "city3", image: UIImage(named: "clear-night"), tag: 2)
-        city4VC.tabBarItem = UITabBarItem(title: "city4", image: UIImage(named: "clear-night"), tag: 3)
+        city1VC.tabBarItem = UITabBarItem(title: CITY_NAMES[0], image: UIImage(named: "clear-night"), tag: 0)
+        city2VC.tabBarItem = UITabBarItem(title: CITY_NAMES[1], image: UIImage(named: "clear-night"), tag: 1)
+        city3VC.tabBarItem = UITabBarItem(title: CITY_NAMES[2], image: UIImage(named: "clear-night"), tag: 2)
+        city4VC.tabBarItem = UITabBarItem(title: CITY_NAMES[3], image: UIImage(named: "clear-night"), tag: 3)
         
         let controllers = [city1VC, city2VC, city3VC, city4VC]
         
