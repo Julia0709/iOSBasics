@@ -14,12 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.blue
-        
-//        let button = UIButton(frame: CGRect(x: view.bounds.width / 2 - 50, y: view.bounds.height / 2, width: 100, height: 50))
-//        button.backgroundColor = UIColor.black
-//        button.addTarget(self, action: #selector(pushToNextVC), for: .touchUpInside)
-//        view.addSubview(button)
-        
+
     }
     
     func pushToNextVC(){
@@ -32,5 +27,15 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+}
+
+class CityViewController: UIViewController {
+    func displayContents() {
+//        let textView = UITextView(frame: CGRect(x: view.bounds.width / 2 - 50, y: view.bounds.height / 2, width: 100, height: 50))
+//        textView.font = UIFont.systemFont(ofSize: 36)
+//        textView.textColor = UIColor.blue
+//        textView.text = "HELLO"
+//        view.addSubview(textView)
     }
 }
