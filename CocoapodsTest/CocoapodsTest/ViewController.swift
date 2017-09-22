@@ -19,7 +19,6 @@ class ViewController: UIViewController {
         let dynamicButton = DynamicButton(frame: CGRect(x: view.bounds.width / 2 - 30, y: view.bounds.height - 120, width: 60, height: 60))
         dynamicButton.style = .hamburger
         dynamicButton.backgroundColor = UIColor.white
-        dynamicButton.tintColor = UIColor.clear
         dynamicButton.layer.cornerRadius = 30
         dynamicButton.layer.borderWidth = 15
         dynamicButton.layer.borderColor = UIColor.white.cgColor
