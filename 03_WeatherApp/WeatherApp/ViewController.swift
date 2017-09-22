@@ -15,6 +15,13 @@ class ViewController: UIViewController {
         
         view.backgroundColor = UIColor.blue
 
+        let textView = UILabel(frame: CGRect(x: view.bounds.width / 2 - 150, y: 120, width: 300, height: 80))
+        textView.textAlignment = NSTextAlignment.center
+        textView.font = UIFont.systemFont(ofSize: 36)
+        textView.textColor = UIColor.white
+        textView.text = "Vancouver"
+        view.addSubview(textView)
+
     }
     
     func pushToNextVC(){
@@ -32,10 +39,6 @@ class ViewController: UIViewController {
 
 class CityViewController: UIViewController {
     func displayContents() {
-//        let textView = UITextView(frame: CGRect(x: view.bounds.width / 2 - 50, y: view.bounds.height / 2, width: 100, height: 50))
-//        textView.font = UIFont.systemFont(ofSize: 36)
-//        textView.textColor = UIColor.blue
-//        textView.text = "HELLO"
-//        view.addSubview(textView)
+
     }
 }
