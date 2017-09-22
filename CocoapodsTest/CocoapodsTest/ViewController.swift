@@ -8,18 +8,29 @@
 
 import UIKit
 import Pastel
+import DynamicButton
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Dynamic button
+        let dynamicButton = DynamicButton(frame: CGRect(x: view.bounds.width / 2 - 30, y: view.bounds.height - 120, width: 60, height: 60))
+        dynamicButton.style = .hamburger
+        dynamicButton.backgroundColor = UIColor.white
+        dynamicButton.tintColor = UIColor.clear
+        dynamicButton.layer.cornerRadius = 30
+        dynamicButton.layer.borderWidth = 15
+        dynamicButton.layer.borderColor = UIColor.white.cgColor
+        dynamicButton.setStyle(.close, animated: true)
+        view.addSubview(dynamicButton)
+
         let pastelView = PastelView(frame: view.bounds)
-        
         // Custom Direction
         pastelView.startPastelPoint = .bottomLeft
         pastelView.endPastelPoint = .topRight
-        
+
         // Custom Duration
         pastelView.animationDuration = 3.0
         
