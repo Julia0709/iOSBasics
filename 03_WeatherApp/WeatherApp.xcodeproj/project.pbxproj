@@ -12,6 +12,8 @@
 		4EBB68BF1ED8C5BE00F32361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EBB68BE1ED8C5BE00F32361 /* Assets.xcassets */; };
 		4EBB68C21ED8C5BE00F32361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EBB68C01ED8C5BE00F32361 /* LaunchScreen.storyboard */; };
 		A3DB38C41F746F28009E2664 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DB38C31F746F28009E2664 /* Color.swift */; };
+		A3FCDF211F74DF0B005FB28D /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FCDF201F74DF0B005FB28D /* CityViewController.swift */; };
+		A3FCDF231F74DF61005FB28D /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FCDF221F74DF61005FB28D /* DetailedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		4EBB68C11ED8C5BE00F32361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EBB68C31ED8C5BE00F32361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3DB38C31F746F28009E2664 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A3FCDF201F74DF0B005FB28D /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
+		A3FCDF221F74DF61005FB28D /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				4EBB68B71ED8C5BE00F32361 /* AppDelegate.swift */,
+				A3FCDF201F74DF0B005FB28D /* CityViewController.swift */,
+				A3FCDF221F74DF61005FB28D /* DetailedViewController.swift */,
 				4EBB68B91ED8C5BE00F32361 /* ViewController.swift */,
+				A3DB38C31F746F28009E2664 /* Color.swift */,
 				4EBB68BE1ED8C5BE00F32361 /* Assets.xcassets */,
 				4EBB68C01ED8C5BE00F32361 /* LaunchScreen.storyboard */,
 				4EBB68C31ED8C5BE00F32361 /* Info.plist */,
-				A3DB38C31F746F28009E2664 /* Color.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			files = (
 				4EBB68BA1ED8C5BE00F32361 /* ViewController.swift in Sources */,
 				4EBB68B81ED8C5BE00F32361 /* AppDelegate.swift in Sources */,
+				A3FCDF231F74DF61005FB28D /* DetailedViewController.swift in Sources */,
 				A3DB38C41F746F28009E2664 /* Color.swift in Sources */,
+				A3FCDF211F74DF0B005FB28D /* CityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
