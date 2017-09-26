@@ -18,12 +18,13 @@ enum ScaryFactor: Int {
 
 struct PlaidgeckoCactus {
     let name: String
-    var image: UIImage?
+    var image: String
     var howScary = ScaryFactor.NotScary
     
     init(withName name: String, imageName image: String?,  howScary: ScaryFactor) {
         self.name = name
         self.howScary = howScary
+        self.image = image!
     }
     
     // (Swift2)

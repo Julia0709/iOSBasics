@@ -14,7 +14,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        tableView.register(UINib(nibName: "CactusTableViewCell", bundle: nil), forCellReuseIdentifier: "cellReuseIdentifier")
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -34,8 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell?.textLabel?.text = cactusData.name
         cell?.detailTextLabel?.text = PlaidgeckoCactus.scaryFactorToString(scaryFactor: cactusData.howScary)
-        cell?.imageView?.image = cactusData.image
-        
+        cell?.imageView?.image = UIImage(named: cactusData.image)
         return cell!
     }
 
