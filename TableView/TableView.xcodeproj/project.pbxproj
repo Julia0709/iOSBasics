@@ -13,6 +13,7 @@
 		A3C2E7CB1F795F7D005C8B9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C2E7CA1F795F7D005C8B9F /* Assets.xcassets */; };
 		A3C2E7CE1F795F7D005C8B9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C2E7CC1F795F7D005C8B9F /* LaunchScreen.storyboard */; };
 		A3C2E7DA1F797D95005C8B9F /* PlaidgeckoCactus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C2E7D91F797D95005C8B9F /* PlaidgeckoCactus.swift */; };
+		A3C2E7DE1F79931D005C8B9F /* CactusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C2E7DD1F79931D005C8B9F /* CactusTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A3C2E7CD1F795F7D005C8B9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3C2E7CF1F795F7D005C8B9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3C2E7D91F797D95005C8B9F /* PlaidgeckoCactus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaidgeckoCactus.swift; sourceTree = "<group>"; };
+		A3C2E7DD1F79931D005C8B9F /* CactusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CactusTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				A3C2E7CC1F795F7D005C8B9F /* LaunchScreen.storyboard */,
 				A3C2E7CF1F795F7D005C8B9F /* Info.plist */,
 				A3C2E7D91F797D95005C8B9F /* PlaidgeckoCactus.swift */,
+				A3C2E7DD1F79931D005C8B9F /* CactusTableViewCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				A3C2E7DA1F797D95005C8B9F /* PlaidgeckoCactus.swift in Sources */,
 				A3C2E7C61F795F7D005C8B9F /* ViewController.swift in Sources */,
+				A3C2E7DE1F79931D005C8B9F /* CactusTableViewCell.swift in Sources */,
 				A3C2E7C41F795F7D005C8B9F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +307,7 @@
 				A3C2E7D41F795F7D005C8B9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

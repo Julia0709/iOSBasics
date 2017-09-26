@@ -8,37 +8,35 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for i in 0...1000 {
-            data.append("\(i)")
-        }
-        
+
+//        tableView.register(UINib(nibName: "CactusTableViewCell", bundle: nil), forCellReuseIdentifier: "cellReuseIdentifier")
+        tableView.delegate = self
         tableView.dataSource = self
     }
-    
-    private var data: [String] = []
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return PlaidgeckoCactus.cactus().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier", for: indexPath) as? CactusTableViewCell
         
-        let text = data[indexPath.row]
+        let cactusData = PlaidgeckoCactus.cactus()[indexPath.row]
         
-        cell.textLabel?.text = text
+        cell?.textLabel?.text = cactusData.name
+        cell?.detailTextLabel?.text = PlaidgeckoCactus.scaryFactorToString(scaryFactor: cactusData.howScary)
+        cell?.imageView?.image = cactusData.image
         
-        return cell
+        return cell!
     }
 
     override func didReceiveMemoryWarning() {
