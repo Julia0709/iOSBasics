@@ -14,8 +14,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.setRightBarButton(editButtonItem, animated: true)
+        
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(false, animated: true)
+        
+        if editing {
+            tableView.setEditing(true, animated: true)
+        } else {
+            tableView.setEditing(false, animated: true)
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -35,6 +47,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell?.detailTextLabel?.text = PlaidgeckoCactus.scaryFactorToString(scaryFactor: cactusData.howScary)
         cell?.imageView?.image = UIImage(named: cactusData.image)
         return cell!
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            var cactusData = PlaidgeckoCactus.cactus()
+            cactusData.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
 
     override func didReceiveMemoryWarning() {
