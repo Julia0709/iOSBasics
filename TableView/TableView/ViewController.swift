@@ -21,10 +21,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        
         if editing {
-            tableView.setEditing(true, animated: true)
+            for (index, item) in cactus.enumerated() {
+                let indexPath = IndexPath(row: cactus.count, section: index)
+//                tableView.insertRows(at: [indexPath], with: animated)
+//            }
+//            tableView.endUpdates()
+            //tableView.setEditing(true, animated: true)
         } else {
-            tableView.setEditing(false, animated: true)
+            for (index, item) in cactus.enumerated() {
+//                let indexPath = IndexPath(row: cactus.count, section: index)
+//                tableView.deleteRows(at: [indexPath], with: animated)
+            }
+            //tableView.setEditing(false, animated: true)
         }
     }
     
@@ -33,13 +44,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cactus.count
+        let adjustment = isEditing ? 1 : 0
+        return cactus.count + adjustment
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier", for: indexPath) as? CactusTableViewCell
-        
         let cactusData = cactus[indexPath.row]
+        
+        if indexPath.row >= cactus.count && isEditing {
+            cell?.textLabel?.text = "Add item"
+            cell?.detailTextLabel?.text = nil
+            cell?.imageView?.image = nil
+        }
         
         cell?.textLabel?.text = cactusData.name
         cell?.detailTextLabel?.text = PlaidgeckoCactus.scaryFactorToString(scaryFactor: cactusData.howScary)
