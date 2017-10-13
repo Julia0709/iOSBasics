@@ -10,12 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var billAmountTextField: UITextField!
+    @IBOutlet weak var tipPercentageTextField: UITextField!
     @IBOutlet weak var calclateTipButton: UIButton!
     @IBOutlet weak var tipAmountTextLabel: UILabel!
     
     @IBAction func calclateTip(_ sender: UIButton) {
         let bill = Double(billAmountTextField.text!)!
-        tipAmountTextLabel.text = String(bill * 0.15)
+        let p = Double(tipPercentageTextField.text!)!
+        tipAmountTextLabel.text = String(bill * (p/100.0))
     }
     
     override func viewDidLoad() {
