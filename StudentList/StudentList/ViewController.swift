@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var names: [String] = []
+    var students: [NSManagedObject] = []
     
     @IBAction func addStudent(_ sender: UIBarButtonItem) {
+
         let alert = UIAlertController(title: "New Name", message: "Add a new student name", preferredStyle: .alert)
+
         let saveAction = UIAlertAction(title: "Save", style: .default) {
             [unowned self] aftion in
             guard let textField = alert.textFields?.first,
@@ -22,7 +25,7 @@ class ViewController: UIViewController {
                     return
             }
             
-            self.names.append(nameToSave)
+            self.save(name: nameToSave)
             self.tableView.reloadData()
         }
         
@@ -35,28 +38,63 @@ class ViewController: UIViewController {
         present(alert, animated: true)
     }
 
+    // Func: Called when view is loaded
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Student List"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
+    
+    // Func: Fetch data to my persistent store
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Student")
+        
+        do {
+            students = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // Func: To save new added names
+    func save(name: String) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Student", in: managedContext)!
+        let student = NSManagedObject(entity: entity, insertInto: managedContext)
+        student.setValue(name, forKey: "name")
+        
+        do {
+            try managedContext.save()
+            students.append(student)
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
 }
 
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection: Int) -> Int {
-        return names.count
+        return students.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let student = students[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = names[indexPath.row]
+        // Grab "name" attribute from "students" NSManagedObject
+        cell.textLabel?.text = student.value(forKeyPath: "name") as? String
         return cell
     }
 }

@@ -10,9 +10,10 @@
 		A34370BE1FA0EC4400F77B80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34370BD1FA0EC4400F77B80 /* AppDelegate.swift */; };
 		A34370C01FA0EC4400F77B80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34370BF1FA0EC4400F77B80 /* ViewController.swift */; };
 		A34370C31FA0EC4400F77B80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A34370C11FA0EC4400F77B80 /* Main.storyboard */; };
-		A34370C61FA0EC4400F77B80 /* StudentList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A34370C41FA0EC4400F77B80 /* StudentList.xcdatamodeld */; };
 		A34370C81FA0EC4400F77B80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A34370C71FA0EC4400F77B80 /* Assets.xcassets */; };
 		A34370CB1FA0EC4400F77B80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A34370C91FA0EC4400F77B80 /* LaunchScreen.storyboard */; };
+		A3CB70761FA147A9006928C3 /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB70741FA147A9006928C3 /* Student+CoreDataClass.swift */; };
+		A3CB70771FA147A9006928C3 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB70751FA147A9006928C3 /* Student+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +21,12 @@
 		A34370BD1FA0EC4400F77B80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A34370BF1FA0EC4400F77B80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A34370C21FA0EC4400F77B80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A34370C51FA0EC4400F77B80 /* StudentList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudentList.xcdatamodel; sourceTree = "<group>"; };
 		A34370C71FA0EC4400F77B80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A34370CA1FA0EC4400F77B80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A34370CC1FA0EC4400F77B80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3CB70731FA0F409006928C3 /* StudentList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudentList.xcdatamodel; sourceTree = "<group>"; };
+		A3CB70741FA147A9006928C3 /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A3CB70751FA147A9006928C3 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +61,13 @@
 			children = (
 				A34370BD1FA0EC4400F77B80 /* AppDelegate.swift */,
 				A34370BF1FA0EC4400F77B80 /* ViewController.swift */,
+				A3CB70741FA147A9006928C3 /* Student+CoreDataClass.swift */,
+				A3CB70751FA147A9006928C3 /* Student+CoreDataProperties.swift */,
 				A34370C11FA0EC4400F77B80 /* Main.storyboard */,
 				A34370C71FA0EC4400F77B80 /* Assets.xcassets */,
 				A34370C91FA0EC4400F77B80 /* LaunchScreen.storyboard */,
 				A34370CC1FA0EC4400F77B80 /* Info.plist */,
-				A34370C41FA0EC4400F77B80 /* StudentList.xcdatamodeld */,
+				A3CB70721FA0F409006928C3 /* StudentList.xcdatamodeld */,
 			);
 			path = StudentList;
 			sourceTree = "<group>";
@@ -139,8 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A34370C61FA0EC4400F77B80 /* StudentList.xcdatamodeld in Sources */,
 				A34370C01FA0EC4400F77B80 /* ViewController.swift in Sources */,
+				A3CB70761FA147A9006928C3 /* Student+CoreDataClass.swift in Sources */,
+				A3CB70771FA147A9006928C3 /* Student+CoreDataProperties.swift in Sources */,
 				A34370BE1FA0EC4400F77B80 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,12 +332,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A34370C41FA0EC4400F77B80 /* StudentList.xcdatamodeld */ = {
+		A3CB70721FA0F409006928C3 /* StudentList.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A34370C51FA0EC4400F77B80 /* StudentList.xcdatamodel */,
+				A3CB70731FA0F409006928C3 /* StudentList.xcdatamodel */,
 			);
-			currentVersion = A34370C51FA0EC4400F77B80 /* StudentList.xcdatamodel */;
+			currentVersion = A3CB70731FA0F409006928C3 /* StudentList.xcdatamodel */;
 			path = StudentList.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
