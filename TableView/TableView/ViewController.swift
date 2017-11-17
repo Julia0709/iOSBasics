@@ -26,16 +26,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if editing {
             for (index, item) in cactus.enumerated() {
                 let indexPath = IndexPath(row: cactus.count, section: index)
-//                tableView.insertRows(at: [indexPath], with: animated)
-//            }
-//            tableView.endUpdates()
-            //tableView.setEditing(true, animated: true)
+              tableView.insertRows(at: [indexPath], with: .automatic)
+            }
+            tableView.endUpdates()
+            tableView.setEditing(true, animated: true)
         } else {
             for (index, item) in cactus.enumerated() {
-//                let indexPath = IndexPath(row: cactus.count, section: index)
-//                tableView.deleteRows(at: [indexPath], with: animated)
+                let indexPath = IndexPath(row: cactus.count, section: index)
+              tableView.deleteRows(at: [indexPath], with: .automatic)
             }
-            //tableView.setEditing(false, animated: true)
+            tableView.setEditing(false, animated: true)
         }
     }
     
