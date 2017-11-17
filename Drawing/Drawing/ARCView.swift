@@ -22,6 +22,5 @@ class ARCView: UIView {
         let center = CGPoint(x: rect.width / 2, y: rect.height - 10)
         path.addArc(withCenter: center, radius: rect.width / 2 - 50, startAngle: 0, endAngle: .pi, clockwise: false)
         path.lineWidth = 3
-        lineColor
     }
 }
