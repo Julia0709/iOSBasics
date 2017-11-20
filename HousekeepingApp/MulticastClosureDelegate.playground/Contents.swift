@@ -28,43 +28,27 @@
  * THE SOFTWARE.
  */
 
-import UIKit
+import PlaygroundSupport
+PlaygroundPage.current.needsIndefiniteExecution = true
 
+import Foundation
 
-public class ProductCollectionViewCell: UICollectionViewCell {
+// MARK: - MulticastClosureDelegate
+public class MulticastClosureDelegate<Success, Failure> {
   
-  // MARK: - Outlets
-  
-  @IBOutlet internal var imageView: UIImageView!
-  @IBOutlet internal var label: UILabel!
-  
-  
-  // MARK: - Class Constructors
-  
-  public class func nib() -> UINib {
-    let nibName = "ProductCollectionViewCell"
-    let bundle = Bundle(for: self)
-    return UINib(nibName: nibName, bundle: bundle)
+  // MARK: - Callback
+  class Callback {
+    
   }
   
+  // MARK: - Instance Properties
   
-  // MARK: - UIView
-  
-  public override func awakeFromNib() {
-    super.awakeFromNib()
-    layer.borderColor = UIColor(white: 0.85, alpha: 1.0).cgColor
-    layer.borderWidth = 2.0
-  }
+  // MARK: - Instance Methods
 }
 
-// MARK: - ProductViewModelView
-extension ProductCollectionViewCell: ProductViewModelView {
-  
-  public var productImageView: UIImageView {
-    return imageView
-  }
-  
-  public var productTitleLabel: UILabel {
-    return label
-  }
-}
+// MARK: - Testing
+typealias Success = () -> Void
+typealias Failure = () -> Void
+
+let multicastDelegate = MulticastClosureDelegate<Success, Failure>()
+let delegate = NSObject()

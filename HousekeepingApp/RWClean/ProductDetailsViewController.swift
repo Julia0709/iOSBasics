@@ -42,16 +42,29 @@ public class ProductDetailsViewController: UIViewController {
   
   // MARK: - View Lifecycle
   public override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    descriptionLabel.text = productViewModel.descriptionText
-    imageView.rw_setImage(url: productViewModel.imageURL)
-    priceLabel.text = productViewModel.priceText
+    super.viewDidLoad()    
+    productViewModel.configure(self)
   }
   
   // MARK: - Actions
   
   @IBAction func makeReservationPressed(_ sender: Any) {
     
+  }
+}
+
+// MARK: - ProductViewModelView
+extension ProductDetailsViewController: ProductViewModelView {
+  
+  public var productImageView: UIImageView {
+    return imageView
+  }
+  
+  public var productPriceLabel: UILabel {
+    return priceLabel
+  }
+  
+  public var productDescriptionLabel: UILabel {
+    return descriptionLabel
   }
 }

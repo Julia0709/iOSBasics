@@ -42,7 +42,7 @@ public class ProductsViewController: UIViewController {
   }
   
   // MARK: - Instance Properties
-  internal var products: [Product] = []
+  internal var productViewModels: [ProductViewModel] = []
   
   // MARK: - Outlets
   @IBOutlet internal var collectionView: UICollectionView! {
@@ -65,7 +65,7 @@ public class ProductsViewController: UIViewController {
       forType: productType,
       success: { [weak self] products in
         guard let strongSelf = self else { return }
-        strongSelf.products = products
+        strongSelf.productViewModels = products.map { ProductViewModel(product: $0) }
         strongSelf.collectionView.reloadData()
         strongSelf.collectionView.refreshControl?.endRefreshing()
         
@@ -94,13 +94,11 @@ public class ProductsViewController: UIViewController {
   }
   
   // MARK: - Segue
-  public override func prepare(for segue: UIStoryboardSegue,
-                               sender: Any?) {
+  public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard let viewController = segue.destination
       as? ProductDetailsViewController else { return }
     let indexPath = collectionView.indexPathsForSelectedItems!.first!
-    let product = products[indexPath.row]
-    viewController.productViewModel = ProductViewModel(product: product)
+    viewController.productViewModel = productViewModels[indexPath.row]
   }
 }
 
@@ -110,22 +108,16 @@ extension ProductsViewController: UICollectionViewDataSource {
   public func collectionView(
     _ collectionView: UICollectionView,
     numberOfItemsInSection section: Int) -> Int {
-    return products.count
+    return productViewModels.count
   }
   
-  public func collectionView(
-    _ collectionView: UICollectionView,
-    cellForItemAt indexPath: IndexPath)
-    -> UICollectionViewCell {
-      
-      let cellIdentifier = "ProductCell"
-      
-      let product = products[indexPath.row]
-      let cell = collectionView.dequeueReusableCell(
-        withReuseIdentifier: cellIdentifier,
-        for: indexPath) as! ProductCollectionViewCell
-      cell.label.text = product.title
-      cell.imageView.rw_setImage(url: product.imageURL)
-      return cell
+  public func collectionView(_ collectionView: UICollectionView,
+                             cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cellIdentifier = "ProductCell"
+    let productViewModel = productViewModels[indexPath.row]
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier,
+                                                  for: indexPath) as! ProductCollectionViewCell
+    productViewModel.configure(cell)
+    return cell
   }
 }
