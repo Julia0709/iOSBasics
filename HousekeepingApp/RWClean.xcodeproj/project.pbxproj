@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4204E82D1EB8CB2F0065CD1C /* SynchronizedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4204E82C1EB8CB2F0065CD1C /* SynchronizedValue.swift */; };
 		420ABA861E74415A00B9884D /* ServerEnvironments.plist in Resources */ = {isa = PBXBuildFile; fileRef = 420ABA851E74415A00B9884D /* ServerEnvironments.plist */; };
 		420B9B541E68D61000972DA3 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420B9B531E68D61000972DA3 /* WelcomePageViewController.swift */; };
 		421139E11E6BCB6D00A057BF /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421139E01E6BCB6D00A057BF /* Product.swift */; };
 		421BD4271E68A3C6002F1F3C /* RoomCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421BD4261E68A3C6002F1F3C /* RoomCountViewController.swift */; };
 		421BD4291E68A887002F1F3C /* RoomSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421BD4281E68A887002F1F3C /* RoomSize.swift */; };
 		421BD42B1E68C98B002F1F3C /* ReviewHomeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421BD42A1E68C98B002F1F3C /* ReviewHomeInfoViewController.swift */; };
+		422CCD0A1EB8AE2A0080507E /* MulticastClosureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422CCD091EB8AE2A0080507E /* MulticastClosureDelegate.swift */; };
 		422FEA5D1E675E8800AFDC41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422FEA5C1E675E8800AFDC41 /* AppDelegate.swift */; };
 		422FEA5F1E675E8800AFDC41 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422FEA5E1E675E8800AFDC41 /* WelcomeViewController.swift */; };
 		422FEA621E675E8800AFDC41 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422FEA601E675E8800AFDC41 /* Welcome.storyboard */; };
@@ -53,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4204E82C1EB8CB2F0065CD1C /* SynchronizedValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynchronizedValue.swift; sourceTree = "<group>"; };
 		420ABA851E74415A00B9884D /* ServerEnvironments.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServerEnvironments.plist; sourceTree = "<group>"; };
 		420B9B531E68D61000972DA3 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
 		421139E01E6BCB6D00A057BF /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 		421BD4281E68A887002F1F3C /* RoomSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomSize.swift; sourceTree = "<group>"; };
 		421BD42A1E68C98B002F1F3C /* ReviewHomeInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewHomeInfoViewController.swift; sourceTree = "<group>"; };
 		42208B841E6DACA500161D99 /* Image_Attributions.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Image_Attributions.md; sourceTree = SOURCE_ROOT; };
+		422CCD091EB8AE2A0080507E /* MulticastClosureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastClosureDelegate.swift; sourceTree = "<group>"; };
 		422FEA591E675E8800AFDC41 /* RWClean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RWClean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		422FEA5C1E675E8800AFDC41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		422FEA5E1E675E8800AFDC41 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,11 @@
 		42F164DE1E6C494400B90E22 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		42F164E01E6C55C200B90E22 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		42F84ABE1E6953120029C1E6 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		A30342E71FC49A8B0038102D /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
+		A30342E81FC49A8B0038102D /* Validators */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Validators; sourceTree = "<group>"; };
+		A30342E91FC49A8C0038102D /* Controllers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controllers; sourceTree = "<group>"; };
+		A30342EA1FC49A8C0038102D /* Views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Views; sourceTree = "<group>"; };
+		A30342EB1FC49A8C0038102D /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +127,15 @@
 				422FEA931E676BDD00AFDC41 /* HomeInfoViewController.swift */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		422CCD081EB8AE190080507E /* MulticastClosureDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				422CCD091EB8AE2A0080507E /* MulticastClosureDelegate.swift */,
+				4204E82C1EB8CB2F0065CD1C /* SynchronizedValue.swift */,
+			);
+			name = MulticastClosureDelegate;
 			sourceTree = "<group>";
 		};
 		422FEA501E675E8800AFDC41 = {
@@ -140,9 +158,11 @@
 		422FEA5B1E675E8800AFDC41 /* RWClean */ = {
 			isa = PBXGroup;
 			children = (
+				A30342E61FC49A710038102D /* Auth */,
 				422FEA731E67608200AFDC41 /* App */,
 				42ECC7D51EB7BC690090EED2 /* Cleaning Services */,
 				42ECC7D61EB7BC700090EED2 /* Home Info */,
+				422CCD081EB8AE190080507E /* MulticastClosureDelegate */,
 				4281CBC61EB85B8200F30B8F /* Networking */,
 				42ECC7D81EB7BC780090EED2 /* Theme */,
 				42ECC7D71EB7BC740090EED2 /* Welcome */,
@@ -396,6 +416,18 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		A30342E61FC49A710038102D /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				A30342E71FC49A8B0038102D /* AuthClient.swift */,
+				A30342E91FC49A8C0038102D /* Controllers */,
+				A30342EB1FC49A8C0038102D /* Models */,
+				A30342E81FC49A8B0038102D /* Validators */,
+				A30342EA1FC49A8C0038102D /* Views */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -483,6 +515,7 @@
 				42BF58651EB7CF8C0072CFCA /* HomeInfoBuilder.swift in Sources */,
 				4281CBCE1EB85C1100F30B8F /* NetworkError.swift in Sources */,
 				422FEA5F1E675E8800AFDC41 /* WelcomeViewController.swift in Sources */,
+				4204E82D1EB8CB2F0065CD1C /* SynchronizedValue.swift in Sources */,
 				4281CBCB1EB85C0600F30B8F /* Int+HTTPStatusCode.swift in Sources */,
 				421BD42B1E68C98B002F1F3C /* ReviewHomeInfoViewController.swift in Sources */,
 				422FEA5D1E675E8800AFDC41 /* AppDelegate.swift in Sources */,
@@ -505,6 +538,7 @@
 				421BD4271E68A3C6002F1F3C /* RoomCountViewController.swift in Sources */,
 				422FEA831E6767EB00AFDC41 /* BedroomCountViewController.swift in Sources */,
 				422FEA901E676B6D00AFDC41 /* OtherRoomCountViewController.swift in Sources */,
+				422CCD0A1EB8AE2A0080507E /* MulticastClosureDelegate.swift in Sources */,
 				4276FCB71EB3E629004E96B9 /* SetNavigationRootSegue.swift in Sources */,
 				42E3DA3A1EB8736100D96E34 /* ProductViewModel.swift in Sources */,
 				421139E11E6BCB6D00A057BF /* Product.swift in Sources */,
