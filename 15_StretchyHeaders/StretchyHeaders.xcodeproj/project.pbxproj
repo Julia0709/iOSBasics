@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		A307464E1FC5EE3D006E7903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307464D1FC5EE3D006E7903 /* AppDelegate.swift */; };
-		A30746501FC5EE3E006E7903 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307464F1FC5EE3E006E7903 /* ViewController.swift */; };
 		A30746531FC5EE3E006E7903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30746511FC5EE3E006E7903 /* Main.storyboard */; };
 		A30746551FC5EE3E006E7903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30746541FC5EE3E006E7903 /* Assets.xcassets */; };
 		A30746581FC5EE3E006E7903 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30746561FC5EE3E006E7903 /* LaunchScreen.storyboard */; };
+		A30746601FC5EFE6006E7903 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307465F1FC5EFE6006E7903 /* TableViewController.swift */; };
+		A30746621FC5F52B006E7903 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30746611FC5F52B006E7903 /* NewsItem.swift */; };
+		A30746641FC5F795006E7903 /* NewsItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30746631FC5F795006E7903 /* NewsItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A307464A1FC5EE3D006E7903 /* StretchyHeaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StretchyHeaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A307464D1FC5EE3D006E7903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A307464F1FC5EE3E006E7903 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A30746521FC5EE3E006E7903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A30746541FC5EE3E006E7903 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A30746571FC5EE3E006E7903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A30746591FC5EE3E006E7903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A307465F1FC5EFE6006E7903 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		A30746611FC5F52B006E7903 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		A30746631FC5F795006E7903 /* NewsItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				A307464D1FC5EE3D006E7903 /* AppDelegate.swift */,
-				A307464F1FC5EE3E006E7903 /* ViewController.swift */,
 				A30746511FC5EE3E006E7903 /* Main.storyboard */,
 				A30746541FC5EE3E006E7903 /* Assets.xcassets */,
 				A30746561FC5EE3E006E7903 /* LaunchScreen.storyboard */,
 				A30746591FC5EE3E006E7903 /* Info.plist */,
+				A307465F1FC5EFE6006E7903 /* TableViewController.swift */,
+				A30746611FC5F52B006E7903 /* NewsItem.swift */,
+				A30746631FC5F795006E7903 /* NewsItemCell.swift */,
 			);
 			path = StretchyHeaders;
 			sourceTree = "<group>";
@@ -136,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A30746501FC5EE3E006E7903 /* ViewController.swift in Sources */,
+				A30746601FC5EFE6006E7903 /* TableViewController.swift in Sources */,
+				A30746641FC5F795006E7903 /* NewsItemCell.swift in Sources */,
+				A30746621FC5F52B006E7903 /* NewsItem.swift in Sources */,
 				A307464E1FC5EE3D006E7903 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
