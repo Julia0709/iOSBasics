@@ -27,6 +27,14 @@ Get user input and display the result.
 An app using a tableView and a Navigation.
 
 
+#### 15_StreachyHeader
+A TableView with a fashionable streachy header.
+
+
+#### 16_Quote Pro
+A social media quote generator app.
+
+
 ## Labs
 #### CocoapodsTest
 Install Cocoapods to use Pastel library.
