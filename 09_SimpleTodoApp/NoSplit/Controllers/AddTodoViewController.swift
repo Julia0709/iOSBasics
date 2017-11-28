@@ -18,6 +18,17 @@ class AddTodoViewController: UIViewController, UITextFieldDelegate {
   
   weak var delegate: AddTodoDelegate!
   var todo: Todo?
+  var index: Int?
+  var isEditMode: Bool?
+  
+  override func viewWillAppear(_ animated: Bool) {
+    if let todo = todo {
+      titleTextField?.text = todo.title
+      descriptionTextField?.text = todo.todoDescription
+      priorityTextField?.text = String(describing: todo.priority)
+      completedSwitch?.isOn = (todo.isCompleted)
+    }
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -29,7 +40,12 @@ class AddTodoViewController: UIViewController, UITextFieldDelegate {
   }
   
   @IBAction func cancelButtonClicked(_ sender: UIButton) {
-    dismiss(animated: true, completion: nil)
+    guard let isEdit = isEditMode else { return }
+    if isEdit {
+      navigationController?.popViewController(animated: true)
+    } else {
+      dismiss(animated: true, completion: nil)
+    }
   }
   
   @IBAction func submitButtonClicked(_ sender: UIButton) {
@@ -39,13 +55,22 @@ class AddTodoViewController: UIViewController, UITextFieldDelegate {
     let todoPriority = priorityTextField.text!
     let todoCompleted = completedSwitch.isOn
     
-    let todo = Todo(title: todoTitle, todoDescription: todoDescription, priprity: Int(todoPriority)!, isCompleted: todoCompleted)
+    let todo = Todo(title: todoTitle, todoDescription: todoDescription, priority: Int(todoPriority)!, isCompleted: todoCompleted)
     
-    delegate.addTodo(todo)
+    guard let isEdit = isEditMode else { return }
+    if isEdit {
+      guard let index = index else { return }
+      delegate.editTodo(todo, at: index)
+      navigationController?.popViewController(animated: true)
+    } else {
+      delegate.addTodo(todo)
+      dismiss(animated: true, completion: nil)
+    }
+
   }
-  
 }
 
 protocol AddTodoDelegate: class {
   func addTodo(_ todo: Todo)
+  func editTodo(_ todo: Todo, at index: Int)
 }

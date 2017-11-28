@@ -35,17 +35,22 @@ class MasterViewController: UITableViewController {
   // MARK: - Segues
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "showDetail" {
-      if let indexPath = self.tableView.indexPathForSelectedRow {
-        let todo = todos[indexPath.row]
-        let controller = segue.destination as! DetailViewController
-        controller.todoItem = todo
-      }
-    } else if segue.identifier == "addTodo" {
+    if segue.identifier == "addTodo" {
       let controller = segue.destination as! AddTodoViewController
       controller.delegate = self
+      controller.isEditMode = false
+    } else if segue.identifier == "editTodo" {
+      if let indexPath = self.tableView.indexPathForSelectedRow {
+        let todo = todos[indexPath.row]
+        let controller = segue.destination as! AddTodoViewController
+        controller.todo = todo
+        controller.isEditMode = true
+        controller.index = indexPath.row
+        controller.delegate = self
+      }
     }
   }
+
   // MARK: - Table View
   
   override func numberOfSections(in tableView: UITableView) -> Int {
@@ -91,6 +96,8 @@ extension MasterViewController: AddTodoDelegate {
     todos.append(todo)
     tableView.reloadData()
   }
+  func editTodo(_ todo: Todo, at index: Int) {
+    todos[index] = todo
+    tableView.reloadData()
+  }
 }
-
-

@@ -12,6 +12,6 @@ import UIKit
 struct Todo {
   let title: String
   let todoDescription: String
-  let priprity: Int
+  let priority: Int
   let isCompleted: Bool
 }
