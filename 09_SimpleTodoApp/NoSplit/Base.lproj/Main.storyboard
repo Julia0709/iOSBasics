@@ -26,43 +26,6 @@
             </objects>
             <point key="canvasLocation" x="-38" y="-630"/>
         </scene>
-        <!--Detail-->
-        <scene sceneID="yUG-lL-AsK">
-            <objects>
-                <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" customModule="NoSplit" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
-                        <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
-                                <rect key="frame" x="20" y="325" width="335" height="17"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="jWN-iV-94e"/>
-                            <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="tHV-ZD-HQj"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
-                    <connections>
-                        <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1455" y="-630"/>
-        </scene>
         <!--Add Todo View Controller-->
         <scene sceneID="Zwt-NI-b1H">
             <objects>
@@ -214,7 +177,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIU-cT-jH1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="IBh-6f-Ypc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1453.5999999999999" y="-1328.1859070464768"/>
+            <point key="canvasLocation" x="1466" y="-630"/>
         </scene>
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
@@ -267,7 +230,7 @@
                                     <outlet property="completedLabel" destination="SBT-dI-BnC" id="1ss-TB-1ST"/>
                                     <outlet property="descriptionLabel" destination="qmc-Y3-Fzr" id="0Ww-Mc-3aj"/>
                                     <outlet property="titleLabel" destination="yZu-BE-KnH" id="s11-9H-seQ"/>
-                                    <segue destination="JEX-9P-axG" kind="show" id="BN8-h2-gQ4"/>
+                                    <segue destination="fRr-0q-1fe" kind="show" id="8yg-Az-uZX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -290,4 +253,7 @@
             <point key="canvasLocation" x="708" y="-630.13493253373315"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2r7-yp-r8S"/>
+    </inferredMetricsTieBreakers>
 </document>
