@@ -1,9 +1,9 @@
 //
 //  DetailViewController.swift
-//  SimpleTodoApp
+//  NoSplit
 //
-//  Created by Julia on 2017/10/17.
-//  Copyright © 2017 Julia. All rights reserved.
+//  Created by Derrick Park on 2017-06-13.
+//  Copyright © 2017 Derrick Park. All rights reserved.
 //
 
 import UIKit
@@ -12,12 +12,18 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
+    var todoItem: Todo? {
+        didSet {
+            // Update the view.
+            self.configureView()
+        }
+    }
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.description
+      if self.todoItem != nil {
+            if let label = self.detailDescriptionLabel {
+              label.text = todoItem?.todoDescription
             }
         }
     }
@@ -25,19 +31,12 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        configureView()
+        self.configureView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    var detailItem: NSDate? {
-        didSet {
-            // Update the view.
-            configureView()
-        }
     }
 
 
